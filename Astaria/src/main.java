@@ -1,11 +1,9 @@
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 
 /**
  * VERSION ID = 1.0
- * Created by Laurence Williams
+ * Created by Laurence Williams and Nicholas Donaldson
  */
 
 public class main {
@@ -19,32 +17,27 @@ public class main {
         newOrLoadSeq();
     }
 
-    public static void clear() throws IOException{
-        Runtime.getRuntime().exec("cls");
-    }
-
     public static void newOrLoadSeq() throws IOException {
+        InputStreamReader istream = new InputStreamReader(System.in);
+        BufferedReader bufRead = new BufferedReader(istream);
         System.out.println("Would you like to start a new game or load an old one?");
+        String newOrLoad = bufRead.readLine();
 
-        public String newOrLoad;
-        newOrLoad = userInput.readLine();
-
-        if (newOrLoad=="load"){
+        if (newOrLoad.equals("load")){
             System.out.println("Filename:");
-            loadFilename = userInput.nextLine();
+            loadFilename = bufRead.readLine();
 
             start(loadFilename);
-        } else if (newOrLoad=="new") {
+        } else if (newOrLoad.equals("new")) {
             System.out.println("Filename:");
-            newFilename = userInput.nextLine();
+            newFilename = bufRead.readLine();
 
             charCreation(newFilename);
-        } else if (newOrLoad=="exit") {
+        } else if (newOrLoad.equals("exit")) {
             System.out.println("Exiting...");
         } else {
             System.out.println("Invalid Command");
             newOrLoadSeq();
-            //TODO: Fix the Invalid Command whenever you enter your choice in newOrLoadSeq
         }
     }
 
