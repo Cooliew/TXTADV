@@ -48,7 +48,7 @@ public class main {
         System.out.println("|  _  / __| __/ _` | '__| |/ _` |");
         System.out.println("| | | \\__ \\ || (_| | |  | | (_| |");
         System.out.println("\\_| |_/___/\\__\\__,_|_|  |_|\\__,_|");
-        System.out.println("Text Adventure created by Laurence Williams");
+        System.out.println("Text Adventure created by Laurence Williams and Nicholas Donaldson");
         System.out.println("");
     }
 
