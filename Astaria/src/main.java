@@ -1,3 +1,6 @@
+import battle.Battle;
+import battle.Monster;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -16,6 +19,11 @@ public class main {
         title();
         newOrLoadSeq();
     }
+
+    // Define a list of monster types
+    public static Monster goblin = new Monster(1, 1, 1, 1);
+    public static Monster witch = new Monster(1, 1, 1, 1);
+    public static Monster guard = new Monster(1, 1, 1, 1);
 
     public static void newOrLoadSeq() throws IOException {
         InputStreamReader istream = new InputStreamReader(System.in);
