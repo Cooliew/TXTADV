@@ -1,4 +1,14 @@
-Version:1.0
+Version:Alpha 1.1
+ADDED:
+1. Monster Creation System
+2. Battle Class - NYI
+TODO:
+1. Add filesaving system
+2. Add mapping system
+3. Complete combat system
+4. Populate areas
+
+Version:Alpha 1.0
 ADDED:
 1. Base Menu System
 2. Logo
