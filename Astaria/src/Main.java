@@ -8,13 +8,13 @@ import java.util.Scanner;
  * Created by Laurence Williams and Nicholas Donaldson
  */
 
-public class main {
+public class Main {
     static String loadFilename;
     static String newFilename;
 
     final static Scanner userInput = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
+    public static void Main(String[] args) throws IOException {
         title();
         newOrLoadSeq();
     }
