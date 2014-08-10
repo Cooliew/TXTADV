@@ -5,11 +5,22 @@ package battle;
  */
 public class Monster {
 
-    public static String[] monsterNames = {"Goblin", "Witch", "Guard"};
-    public static int[][] monsterStats = {
-            /* Goblin */ {1, 2, 3},
-            /* Witch  */ {2, 3, 1},
-            /* Guard  */ {3, 1, 2}
-    };
+    public static String[] monsterNames = new String[255];
+    public static int[][] monsterStats = new int[255][3];
+
+    public static int id = 1;
+
+    static {
+        monsterNames[0] = "MissingNo";
+    }
+
+
+    public Monster(String name, int hp, int ap, int dp) {
+        monsterNames[id] = name;
+        monsterStats[id][0] = hp;
+        monsterStats[id][1] = ap;
+        monsterStats[id][2] = dp;
+        id++;
+    }
 
 }

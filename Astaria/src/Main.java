@@ -1,4 +1,5 @@
 import battle.Battle;
+import battle.Monster;
 
 import java.io.*;
 import java.util.Scanner;
@@ -12,11 +13,14 @@ public class Main {
     static String loadFilename;
     static String newFilename;
 
+
+
     final static Scanner userInput = new Scanner(System.in);
 
-    public static void Main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         title();
         newOrLoadSeq();
+        loadMonsters();
     }
 
     public static void newOrLoadSeq() throws IOException {
@@ -41,6 +45,16 @@ public class Main {
             System.out.println("Invalid Command");
             newOrLoadSeq();
         }
+    }
+
+    public static void loadMonsters() {
+        /** Load the monsters into the game
+         *  To add a new monster type:
+         *  "new Monster(name, health, attack, defence)"
+         */
+        new Monster("Goblin", 1, 2, 3);
+        new Monster("Witch", 2, 3, 1);
+        new Monster("Guard", 3, 1, 2);
     }
 
     public static void title() {
